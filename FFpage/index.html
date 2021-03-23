@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calendar</title>
+    <!-- CSS style -->
+    <link rel="stylesheet" href="style.css" />
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+</head>
+<body>
+    <div id="main-title">
+        <h1>FireFighter Overtimer Tracker</h1>
+
+    </div>
+    <div id="cal-wrap">
+        <!-- [PERIOD SELECTOR] -->
+        <div id="cal-date">
+            <select id="cal-mth"></select>
+            <select id="cal-yr"></select>
+            <input id="cal-set" type="button" value="SET" />
+        </div>
+
+        <!-- [CALENDAR] -->
+        <div id="cal-container"></div>
+
+        <!-- [EVENT] -->
+        <div id="cal-event"></div>
+    </div>
+    <div id="divBut">
+
+
+        <button class="btn" onclick="showPref()">Change Prefrences</button>
+        <button class="btn" onclick="logout()">Log out</button>
+
+    </div>
+
+
+    <div class="pref" style="padding: 2em; border: 1px solid">
+        <input name="Engine 59" id="cb0" type="checkbox">Engine 59
+        <input name="Engine 56" id="cb1" type="checkbox">Engine 56
+        <input name="Engine 43" id="cb2" type="checkbox">Engine 43
+        <input name="Engine 11" id="cb3" type="checkbox">Engine 11
+        <input name="Engine 8" id="cb4" type="checkbox">Engine 8
+        <input name="Engine 1" id="cb5" type="checkbox">Engine 1
+        <br />
+        <button class="btn" onclick="hidePref()">Save Prefrences</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="buttons.js"></script>
+   
+
+</body>
+</html>
